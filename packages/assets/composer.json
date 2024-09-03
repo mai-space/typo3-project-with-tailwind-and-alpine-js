@@ -1,0 +1,19 @@
+{
+  "name": "iwm/assets",
+  "type": "typo3-cms-extension",
+  "license": "proprietary",
+  "homepage": "https://www.iwmedien.de",
+  "require": {
+    "typo3/cms-core": "^12.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Iwm\\Frontend\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "assets"
+    }
+  }
+}

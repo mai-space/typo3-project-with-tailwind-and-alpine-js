@@ -1,0 +1,127 @@
+lib {
+    templates {
+        # Initiate template (used by page)
+        base = CASE
+        base {
+            key {
+                data = levelfield:-1, backend_layout_next_level, slide
+                override.data = page:backend_layout
+            }
+
+            10 = FLUIDTEMPLATE
+            10 {
+                layoutRootPaths {
+                    10 = {$styles.pages.layoutRootPath}
+                }
+
+                partialRootPaths {
+                    10 = {$styles.pages.partialRootPath}
+                }
+
+                templateRootPaths {
+                    10 = {$styles.pages.templateRootPath}
+                }
+
+                # Choose template file (based on backend_layout, respecting heredity)
+                templateName = Default
+
+                settings < plugin.tx_project.settings
+
+                variables {
+                    # Column content (use eg. {columnMain -> f:format.raw()} for proper output in fluid template)
+                    columnMain =< lib.templates.columns.main
+                }
+
+                dataProcessing {
+                    1 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+                    1 {
+                        as = site
+                    }
+
+                    10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+                    10 {
+                        special = directory
+                        special {
+                            value = 1
+                        }
+
+                        as = menuMain
+                        levels = 1
+                        expandAll = 1
+                        includeSpacer = 1
+                        titleField = nav_title // title
+                    }
+
+                    20 < .10
+                    20 {
+                        special {
+                            value = {$uids.meta}
+                        }
+
+                        as = menuMeta
+                    }
+
+                    30 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    30 {
+                        table = pages
+                        pidInList = this
+                        references.fieldName = media
+                        as = files
+                    }
+                }
+            }
+
+            default =< lib.templates.base.10
+            default {
+                templateName = Default
+            }
+
+            pagets__Main < .default
+
+            pagets__Start =< lib.templates.base.10
+            pagets__Start {
+                templateName = Start
+            }
+        }
+
+        # Column configuration
+        columns {
+            one = COA
+            one {
+                20 < styles.content.get
+                20.select.where = colPos = 1
+            }
+
+            main < .one
+            main {
+                20.select.where = colPos = 0
+            }
+
+            two < .one
+            two {
+                20.select.where = colPos = 2
+            }
+
+            three < .one
+            three {
+                20.select.where = colPos = 3
+            }
+
+            four < .one
+            four {
+                20.select.where = colPos = 4
+            }
+
+            five < .one
+            five {
+                20.select.where = colPos = 5
+            }
+
+            six < .one
+            six {
+                20.select.where = colPos = 6
+            }
+        }
+
+    }
+}

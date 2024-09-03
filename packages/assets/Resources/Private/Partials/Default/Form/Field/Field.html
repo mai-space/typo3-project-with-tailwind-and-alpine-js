@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers"
+      xmlns:base="http://typo3.org/ns/Iwm/Base/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:form.validationResults for="{element.rootForm.identifier}.{element.identifier}">
+    <div
+        class="form__item form__item--{element.type -> f:format.case(mode: 'lower')}{f:if(condition: validationResults.errors.0, then: ' form__item--message-error')}{f:if(condition: additionalClass, then: ' {additionalClass}')}">
+        <p class="message message--error icon--before" id="{element.uniqueIdentifier}-errors" role="alert"
+           {f:if(condition: validationResults.flattenedErrors, else: ' hidden')}>
+
+        <span class="element">
+                <f:for each="{validationResults.errors}" as="error">
+                    {formvh:translateElementError(element: element, error: error)}
+                    <br/>
+                </f:for>
+            </span>
+        </p>
+
+        {elementContent -> f:format.raw()}
+
+        <f:if condition="{element.properties.elementDescription}">
+            <p class="label message--help">
+                {formvh:translateElementProperty(element: element, property: 'elementDescription')}
+            </p>
+        </f:if>
+
+        <f:if
+            condition="{doNotShowLabel} != 1 && {formvh:translateElementProperty(element: element, property: 'label')}">
+            <label for="{element.uniqueIdentifier}" class="control-label p">
+                {formvh:translateElementProperty(element: element, property: 'label')}
+                <f:if condition="{element.required}">
+                    <f:render partial="Field/Required"/>
+                </f:if>
+            </label>
+        </f:if>
+    </div>
+</f:form.validationResults>
+</html>

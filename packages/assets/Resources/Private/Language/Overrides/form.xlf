@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-19T19:44:55Z"
+		  product-name="Project">
+		<header/>
+		<body>
+			<trans-unit id="element.dataprotection.properties.label">
+				<source>Consent: I agree to the collection, processing and storage of the data collected for the purpose
+					of answering my inquiry via this contact form. I have taken note of the %s of Make it in Germany. I
+					am aware that I can revoke my consent anytime. This does not affect the lawfulness of the processing
+					that has occured up to this point.
+				</source>
+			</trans-unit>
+			<trans-unit id="element.dataprotection.properties.linkText">
+				<source>data protection statement</source>
+			</trans-unit>
+			<trans-unit id="element.email.properties.label">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="element.email.properties.placeholder">
+				<source>johndoe@domain.com</source>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.label">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.prependOptionLabel">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.options.d">
+				<source>diverse</source>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.options.m">
+				<source>male</source>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.options.w">
+				<source>female</source>
+			</trans-unit>
+			<trans-unit id="element.message.properties.label">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="element.message.properties.placeholder">
+				<source>Your message</source>
+			</trans-unit>
+			<trans-unit id="element.name.properties.label">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="element.name.properties.placeholder">
+				<source>John Doe</source>
+			</trans-unit>
+			<trans-unit id="element.subject.properties.label">
+				<source>Subject</source>
+			</trans-unit>
+			<trans-unit id="element.subject.properties.placeholder">
+				<source>Your topic</source>
+			</trans-unit>
+			<trans-unit id="element.telephone.properties.label">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="element.telephone.properties.placeholder">
+				<source>+44 123 456789</source>
+			</trans-unit>
+
+			<trans-unit id="element.Form.renderingOptions.submitButtonLabel">
+				<source>Send</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

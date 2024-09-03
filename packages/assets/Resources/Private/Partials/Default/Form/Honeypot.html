@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="form__item form__item--honeypot">
+    <f:if condition="{element.properties.renderAsHiddenField}">
+        <f:then>
+            <f:form.hidden property="{element.identifier}" id="{element.uniqueIdentifier}"
+                           additionalAttributes="{autocomplete: element.identifier}"/>
+        </f:then>
+        <f:else>
+            <f:form.textfield property="{element.identifier}" id="{element.uniqueIdentifier}"
+                              class="{element.properties.elementClassAttribute}"
+                              additionalAttributes="{autocomplete: element.identifier, aria-hidden: 'true'}"
+                              tabindex="-1" style="{element.properties.styleAttribute}"/>
+        </f:else>
+    </f:if>
+</div>
+</html>

@@ -1,0 +1,84 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:base="http://typo3.org/ns/Iwm/Base/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="card card--default card--md">
+    <f:link.typolink parameter="{link}" title="{title -> f:format.raw()}: {subtitle -> f:format.raw()}"
+                     class="more card__more">
+        <span class="sr-only">
+            <f:translate key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:more"/>
+        </span>
+    </f:link.typolink>
+
+    <f:if condition="{files}">
+        <f:then>
+            <f:for each="{files}" as="file" iteration="iterator">
+                <f:if
+                    condition="{file.properties.tx_project_displayoptions} == 'preview' || {file.properties.tx_project_displayoptions} == 'always' && {file.properties.hidden} !== 1">
+                    <figure class="media card__media" itemprop="image" itemscope=""
+                            itemtype="http://schema.org/ImageObject">
+                        <picture class="aspect-ratio--4by3 aspect-ratio-md--16by9">
+                            <source srcset=""
+                                    data-srcset="{f:uri.image(image: file, width: '700', cropVariant: '16x9')}"
+                                    media="(min-width: 48rem)"/>
+                            <source srcset=""
+                                    data-srcset="{f:uri.image(image: file, width: '525', cropVariant: '4x3')}"/>
+                            <f:image image="{file}" width="16" cropVariant="16x9"
+                                     data="{src: '{f:uri.image(image: file, width: 700, cropVariant: \'16x9\')}'}"
+                                     title="{title -> f:format.raw()}" alt="{title -> f:format.raw()}"
+                                     loading="{settings.media.lazyLoading}" class="img-fluid lazyload"/>
+                            <noscript>
+                                <f:image image="{file}" width="700" cropVariant="16x9" title="{title -> f:format.raw()}"
+                                         alt="{title -> f:format.raw()}" class="img-fluid"/>
+                            </noscript>
+                            <span class="placeholder icon--center">
+
+                            </span>
+                        </picture>
+                        <meta itemprop="url" content="{f:uri.image(image: file, crop: NULL, absolute: 1)}">
+                        <meta itemprop="width" content="700">
+                        <meta itemprop="height" content="394">
+                    </figure>
+                </f:if>
+            </f:for>
+        </f:then>
+        <f:else>
+            <figure class="media card__media" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+                <picture class="aspect-ratio--4by3 aspect-ratio-md--16by9">
+                    <source srcset=""
+                            data-srcset="{f:uri.image(src: 'fileadmin/images/3000x3000.png', width: '700c', height: '394c')}"
+                            media="(min-width: 48rem)"/>
+                    <source srcset=""
+                            data-srcset="{f:uri.image(src: 'fileadmin/images/3000x3000.png', width: '525c', height: '329c')}"/>
+                    <f:image src="fileadmin/images/3000x3000.png" width="16c" height="9c"
+                             data="{src: '{f:uri.image(src: \'fileadmin/images/3000x3000.png\', width: \'700c\', height: \'394c\')}'}"
+                             title="{title -> f:format.raw()}" alt="{title -> f:format.raw()}"
+                             loading="{settings.media.lazyLoading}" class="img-fluid lazyload"/>
+                    <noscript>
+                        <f:image src="fileadmin/images/3000x3000.png" width="700" height="394c"
+                                 title="{title -> f:format.raw()}" alt="{title -> f:format.raw()}" class="img-fluid"/>
+                    </noscript>
+                    <span class="placeholder icon--center">
+
+                    </span>
+                </picture>
+                <meta itemprop="url"
+                      content="{f:uri.image(src: 'fileadmin/images/3000x3000.png', crop: NULL, absolute: 1)}">
+                <meta itemprop="width" content="700">
+                <meta itemprop="height" content="394">
+            </figure>
+        </f:else>
+    </f:if>
+
+    <f:if condition="{subtitle} || {title}">
+        <header class="card__head card__head--bottom">
+            <span class="p size--m">
+                {subtitle -> f:format.raw()}
+            </span>
+
+            <h3 itemprop="headline">
+                {title -> f:format.raw()}
+            </h3>
+        </header>
+    </f:if>
+</div>
+</html>

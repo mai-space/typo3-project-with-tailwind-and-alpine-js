@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" product-name="project">
+		<header/>
+		<body>
+			<trans-unit id="brand">
+				<target>IW Medien</target>
+			</trans-unit>
+			<trans-unit id="slogan">
+				<target>IW Medien</target>
+			</trans-unit>
+			<trans-unit id="copyright">
+				<target>by IW Medien. Alle Rechte vorbehalten.</target>
+			</trans-unit>
+			<trans-unit id="meta.description">
+				<target>Herzlich Willkommen auf der Internetseite der IW Medien GmbH.</target>
+			</trans-unit>
+			<trans-unit id="meta.keywords">
+				<target>IW, IW Medien, Agentur</target>
+			</trans-unit>
+
+			<trans-unit id="content-element">
+				<target>Inhaltselement mit der ID %s</target>
+			</trans-unit>
+			<trans-unit id="enable-javascript">
+				<target>Sie müssen JavaScript in Ihrem Browser aktivieren, um dieses Modul nutzen zu können.</target>
+			</trans-unit>
+			<trans-unit id="iframe.activate">
+				<target>Externen Inhalt aktivieren</target>
+			</trans-unit>
+			<trans-unit id="lightbox.open">
+				<target>Bild in Lightbox zeigen</target>
+			</trans-unit>
+			<trans-unit id="more">
+				<target>Mehr lesen</target>
+			</trans-unit>
+			<trans-unit id="optional">
+				<target>Optional</target>
+			</trans-unit>
+			<trans-unit id="placeholder">
+				<target>Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="privacy.single">
+				<target>Um Ihre Daten zu schützen, ist dieses Element standardmäßig deaktiviert. Wenn Sie das Element
+					eigenhändig aktivieren, erhält der Drittanbieter %s solange dauerhaft Kenntnis über Ihren Besuch bei
+					uns, bis Sie das Element eigenhändig wieder deaktivieren oder Ihre Cookies löschen.
+				</target>
+			</trans-unit>
+			<trans-unit id="privacy.multiple">
+				<target>Um Ihre Daten zu schützen, ist dieses Element standardmäßig deaktiviert. Wenn Sie das Element
+					eigenhändig aktivieren, erhalten die Drittanbieter %s solange dauerhaft Kenntnis über Ihren Besuch
+					bei uns, bis Sie das Element eigenhändig wieder deaktivieren oder Ihre Cookies löschen.
+				</target>
+			</trans-unit>
+			<trans-unit id="video.play">
+				<target>Video abspielen</target>
+			</trans-unit>
+
+			<trans-unit id="facebook">
+				<target>Facebook</target>
+			</trans-unit>
+			<trans-unit id="linkedin">
+				<target>LinkedIn</target>
+			</trans-unit>
+			<trans-unit id="twitter">
+				<target>Twitter</target>
+			</trans-unit>
+			<trans-unit id="xing">
+				<target>Xing</target>
+			</trans-unit>
+
+			<trans-unit id="home">
+				<target>Zur Startseite</target>
+			</trans-unit>
+
+			<trans-unit id="nav.menu.close">
+				<target>Menü schließen</target>
+			</trans-unit>
+			<trans-unit id="nav.menu.show">
+				<target>Menü öffnen</target>
+			</trans-unit>
+			<trans-unit id="nav.menu.toggle">
+				<target>Menü öffnen/schließen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

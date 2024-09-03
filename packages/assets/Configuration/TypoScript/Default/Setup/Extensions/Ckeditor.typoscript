@@ -1,0 +1,44 @@
+lib {
+    parseFunc {
+        // Prevent auto links
+        makelinks >
+
+        // Allow tag rendering in frontend
+        allowTags := addToList(object,param,embed,iframe,div,wbr)
+    }
+
+    parseFunc_RTE {
+        // Prevent auto links
+        makelinks >
+
+        // Allow tag rendering in frontend
+        allowTags := addToList(object,param,embed,iframe,div,wbr)
+
+
+        nonTypoTagStdWrap {
+            HTMLparser {
+                // Remove any 'shy' classes from <span> elements
+                tags.span.fixAttrib.class.removeIfEquals = shy
+
+                // Remove all <span> elements which have no attribute
+                rmTagIfNoAttrib = span
+            }
+        }
+
+        externalBlocks {
+            ul {
+                stdWrap {
+                    callRecursive = 1
+                    HTMLparser = 1
+                    HTMLparser {
+                        tags.span.fixAttrib.class.removeIfEquals = shy
+                        rmTagIfNoAttrib = span
+                        keepNonMatchedTags = 1
+                    }
+                }
+            }
+
+            ol < .ul
+        }
+    }
+}

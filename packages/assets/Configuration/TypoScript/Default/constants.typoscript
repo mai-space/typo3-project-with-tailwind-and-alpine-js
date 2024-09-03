@@ -1,0 +1,18 @@
+# -------------------------------------------------------------------------------------- BEGIN: Include static constants
+
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+@import 'EXT:seo/Configuration/TypoScript/XmlSitemap/constants.typoscript'
+
+@import 'EXT:dp_cookieconsent/Configuration/TypoScript/constants.typoscript'
+
+# ---------------------------------------------------------------------------------------- END: Include static constants
+
+# -------------------------------------------------------------------------------------------- BEGIN:  Include constants
+
+@import 'EXT:assets/Configuration/TypoScript/Default/Constants/Globals.typoscript'
+@import 'EXT:assets/Configuration/TypoScript/Default/Constants/Config.typoscript'
+
+@import 'EXT:assets/Configuration/TypoScript/Default/Constants/Contents/'
+@import 'EXT:assets/Configuration/TypoScript/Default/Constants/Extensions/'
+
+# ----------------------------------------------------------------------------------------------- END: Include constants

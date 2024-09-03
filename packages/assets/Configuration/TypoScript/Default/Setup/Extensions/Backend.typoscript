@@ -1,0 +1,8 @@
+module {
+    tx_backend {
+        view {
+            templateRootPaths.100 = EXT:assets/Resources/Private/Templates/Backend/
+            partialRootPaths.100 = EXT:assets/Resources/Private/Partials/Backend/
+        }
+    }
+}

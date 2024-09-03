@@ -1,0 +1,67 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:base="http://typo3.org/ns/Iwm/Base/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+    <div class="carousel carousel--single">
+        <div class="carousel__inner splide">
+            <div class="splide__parent">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <f:for each="{items}" as="item">
+                            <div class="splide__slide">
+                                <f:for each="{item.files}" as="file" iteration="iterator">
+                                    <figure itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"
+                                            class="image-container">
+                                        <a href="#" title="{file.title}">
+                                        <span class="sr-only">
+                                            <f:translate
+                                                key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:lightbox.open"/>
+                                        </span>
+                                            <picture class="aspect-ratio--2by1">
+                                                <f:image image="{file}" width="16" cropVariant="2x1"
+                                                         data="{src: '{f:uri.image(image: file, width: 1000, cropVariant: \'2x1\')}'}"
+                                                         title="{file.title -> f:format.raw()}"
+                                                         alt="{file.alternative -> f:format.raw()}"
+                                                         loading="{settings.media.lazyLoading}"
+                                                         class="img-fluid lazyload"/>
+                                                <noscript>
+                                                    <f:image image="{file}" width="1000" cropVariant="2x1"
+                                                             title="{file.title -> f:format.raw()}"
+                                                             alt="{file.alternative -> f:format.raw()}"
+                                                             class="img-fluid"/>
+                                                </noscript>
+                                                <span class="placeholder icon--center">
+
+                                            </span>
+                                            </picture>
+                                            <meta itemprop="url"
+                                                  content="{f:uri.image(image: file, crop: NULL, absolute: 1)}">
+                                            <meta itemprop="width" content="1000">
+                                            <meta itemprop="height" content="500">
+                                        </a>
+
+                                        <figcaption class="media__caption">
+                                            <f:if condition="{item.data.header}">
+                                                <h3>{item.data.header}</h3>
+                                            </f:if>
+
+                                            <f:if condition="{item.data.description}">
+                                                <p class="text">
+                                                    {item.data.description}
+                                                </p>
+                                            </f:if>
+                                        </figcaption>
+                                    </figure>
+                                </f:for>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="splide__pagination"></ul>
+        </div>
+    </div>
+</f:section>
+</html>

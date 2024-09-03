@@ -1,0 +1,49 @@
+# ------------------------------------------------------------------------------------------------------ BEGIN: Settings
+
+styles {
+    templates {
+        layoutRootPath = EXT:assets/Resources/Private/Layouts/Default/ContentElements/
+        partialRootPath = EXT:assets/Resources/Private/Partials/Default/ContentElements/
+        templateRootPath = EXT:assets/Resources/Private/Templates/Default/ContentElements/
+    }
+
+    plugins {
+        layoutRootPath = EXT:assets/Resources/Private/Layouts/Default/Plugins/
+        partialRootPath = EXT:assets/Resources/Private/Partials/Default/Plugins/
+        templateRootPath = EXT:assets/Resources/Private/Templates/Default/Plugins/
+    }
+
+    pages {
+        layoutRootPath = EXT:assets/Resources/Private/Layouts/Default/Page/
+        partialRootPath = EXT:assets/Resources/Private/Partials/Default/Page/
+        templateRootPath = EXT:assets/Resources/Private/Templates/Default/Page/
+    }
+
+    backend {
+        layoutRootPath = EXT:assets/Resources/Private/Layouts/Backend/
+        partialRootPath = EXT:assets/Resources/Private/Partials/Backend/
+        templateRootPath = EXT:assets/Resources/Private/Templates/Backend/
+    }
+
+    content {
+        allowTags := addToList(div, object, param, embed, iframe)
+
+        textmedia {
+            maxW = 1400
+            maxWInText = 700
+
+            rowSpacing = 0
+            columnSpacing = 0
+            textMargin = 0
+
+            linkWrap {
+                lightboxEnabled = 1
+                lightboxCssClass = photoswipe
+                lightboxRelAttribute >
+            }
+        }
+    }
+}
+
+
+# -------------------------------------------------------------------------------------------------------- END: Settings

@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:base="http://typo3.org/ns/Iwm/Base/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="iframe__placeholder aspect-ratio--{aspectRatio}">
+    <video width="1600" {f:if(condition: previewImage, then:
+    ' poster="{previewImage}"')}>
+    <source src="{slug}" type="{mimeType}">
+
+    <f:translate key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:video"/>
+    </video>
+</div>
+
+<button class="iframe__button btn icon--center">
+
+    <span class="sr-only">
+        <f:translate key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:video.play"/>
+    </span>
+</button>
+</html>

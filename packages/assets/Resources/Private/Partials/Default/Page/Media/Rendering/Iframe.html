@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:base="http://typo3.org/ns/Iwm/Base/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="iframe__placeholder aspect-ratio aspect-ratio--{aspectRatio}">
+    <f:if condition="{previewImage}">
+        <f:then>
+            <f:image src="{previewImage}" width="16" data="{src: previewImage, width: 1400}"
+                     title="{file.title -> f:format.raw()}" alt="{file.alternative -> f:format.raw()}"
+                     loading="{settings.media.lazyLoading}" class="img-fluid lazyload"/>
+        </f:then>
+        <f:else>
+            <div></div>
+        </f:else>
+    </f:if>
+</div>
+
+<f:switch expression="{type}">
+    <f:case value="iframe">
+        <button class="iframe__button btn icon--center">
+
+            <span class="sr-only">
+                <f:translate key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:iframe.activate"/>
+            </span>
+        </button>
+    </f:case>
+    <f:case value="video">
+        <button class="iframe__button btn icon--center">
+
+            <span class="sr-only">
+                <f:translate key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:video.play"/>
+            </span>
+        </button>
+    </f:case>
+</f:switch>
+
+<template>
+    <div class="iframe__replacement aspect-ratio aspect-ratio--{aspectRatio}">
+        <div
+            class="player player--{file.extension}"
+            id="player{file.uid}"
+            data-provider="{file.extension}"
+            data-embed-id="{file.contents}">
+    </div>
+</template>
+</html>

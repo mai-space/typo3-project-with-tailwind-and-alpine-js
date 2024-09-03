@@ -1,0 +1,158 @@
+[backend.user.isLoggedIn && traverse(request.getQueryParams(), 'debug') == 1]
+    # Enable debug settings when &debug=1 is given in query string and current user is logged in backend
+    config {
+        debug = 1
+
+        contentObjectExceptionHandler = 0
+
+        compressCss = 0
+        concatenateCss = 0
+        compressJs = 0
+        concatenateJs = 0
+
+        linkVars := addToList(debug(1))
+        disablePrefixComment = 0
+    }
+
+    # Line break helper
+    lib.debugLineBreak = COA
+    lib.debugLineBreak {
+        10 = TEXT
+        10.char = 13
+        20 = TEXT
+        20.char = 10
+    }
+
+    # Special debug settings for plugins
+    plugin.tx_min.tinysource.enable = 0
+
+    # Show debug infos in html comments
+    page {
+        1442843776 = COA
+        1442843776 {
+            1 = TEXT
+            1 {
+                value = DEBUG INFORMATIONS
+                append < lib.debugLineBreak
+            }
+
+            2 < .1
+            2 {
+                value = ------------------
+                stdWrap.append < lib.debugLineBreak
+            }
+
+            10 = TEXT
+            10 {
+                field = backend_layout
+                ifEmpty.data = levelfield:-1 , backend_layout_next_level, slide
+
+                noTrimWrap = |Backend layout uid: ||
+                append < lib.debugLineBreak
+            }
+
+            20 < lib.templates.base.file.stdWrap.cObject
+            20 {
+                stdWrap {
+                    noTrimWrap = |Template file: ||
+
+                    append < lib.debugLineBreak
+                }
+            }
+
+            stdWrap {
+                stdWrap.prepend < lib.debugLineBreak
+                stdWrap.prepend {
+                    wrap = <!--|
+                }
+
+                prepend < lib.debugLineBreak
+
+                append < lib.debugLineBreak
+                append {
+                    wrap = -->|
+                }
+            }
+        }
+    }
+[global]
+
+
+# Some convinience parameters: ?cssdebug=1 or ?jsdebug=1 or ?adminpanel=1
+[backend.user.isLoggedIn && traverse(request.getQueryParams(), 'cssdebug') == 1]
+    config {
+        compressCss = 0
+        concatenateCss = 0
+
+        linkVars := addToList(cssdebug(1))
+    }
+[END]
+
+[backend.user.isLoggedIn && traverse(request.getQueryParams(), 'jsdebug') == 1]
+    config {
+        compressJs = 0
+        concatenateJs = 0
+
+        linkVars := addToList(jsdebug(1))
+    }
+[END]
+
+[backend.user.isLoggedIn && traverse(request.getQueryParams(), 'adminpanel') == 1]
+    config {
+        admPanel = 1
+
+        linkVars := addToList(adminpanel(1))
+    }
+[END]
+
+
+# Environment Labels in FE
+[applicationContext == "Development/*"]
+    page {
+        cssInline {
+            1442843775 = TEXT
+            1442843775.value (
+        .environmentNotice {
+          color: #fff;
+          position: fixed;
+          bottom: 20px;
+          right: 0;
+          padding: 8px 16px;
+          border: 1px solid #fff;
+          border-right: none;
+          -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+          box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+          font-family: Verdana, Tahoma, Arial, sans-serif;
+          font-size: 16px;
+          cursor: default;
+          line-height: 18px;
+        }
+        .environmentNotice span {
+          text-decoration: underline;
+          margin-right: 10px;
+          background: #fff;
+          padding: 8px 10px;
+          margin-left: -16px;
+        }
+            )
+
+            1442843777 = TEXT
+            1442843777.value (
+        .environmentNotice-dev {
+          background: #ff5a00;
+          color: #fff;
+        }
+        .environmentNotice-dev span {
+          color: #ff5a00;
+        }
+            )
+        }
+
+        1442843777 = TEXT
+        1442843777 {
+            value = Dev Environment
+            wrap = <div class="environmentNotice environmentNotice-dev"><span>/!\</span>|</div>
+        }
+    }
+[END]

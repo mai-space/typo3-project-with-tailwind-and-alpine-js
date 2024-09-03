@@ -1,0 +1,79 @@
+plugin {
+    tx_project {
+        view {
+            layoutRootPaths {
+                10 = {$styles.templates.layoutRootPath}
+            }
+
+            partialRootPaths {
+                10 = {$styles.templates.partialRootPath}
+            }
+
+            templateRootPaths {
+                10 = {$styles.templates.templateRootPath}
+            }
+
+        }
+
+        persistence {
+            storagePid = {$pids.storage.default}
+        }
+
+        settings {
+            baseUrl = {$globals.settings.baseUrl}
+
+            uids {
+                home = {$uids.home}
+                meta = {$uids.meta}
+                privacy = {$uids.privacy}
+                googleTagManager = {$uids.googleTagManager}
+            }
+
+            pids {
+                storage {
+                    default = {$pids.storage.default}
+                }
+            }
+
+            media {
+                lazyLoading = {$globals.media.lazyLoading}
+            }
+
+            images {
+                default = {$globals.images.default}
+            }
+
+            color {
+                primaryColor = {$globals.color.primaryColor}
+                secondaryColor = {$globals.color.secondaryColor}
+            }
+        }
+
+        features {
+            requireCHashArgumentForActionArguments = 0
+        }
+    }
+}
+
+module {
+    tx_project {
+        settings < plugin.tx_project.settings
+
+        view {
+            layoutRootPaths {
+                5 = {$styles.pages.partialRootPath}
+                10 = {$styles.backend.layoutRootPath}
+            }
+
+            partialRootPaths {
+                5 = {$styles.pages.partialRootPath}
+                10 = {$styles.backend.partialRootPath}
+            }
+
+            templateRootPaths {
+                5 = {$styles.pages.partialRootPath}
+                10 = {$styles.backend.templateRootPath}
+            }
+        }
+    }
+}

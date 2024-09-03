@@ -1,0 +1,45 @@
+# Navigation: Breadcrumb
+lib.breadcrumb = COA
+lib.breadcrumb {
+    wrap = <ul>|</ul>
+
+    10 = HMENU
+    10 {
+        special = rootline
+        special.range = 0|-2
+
+        1 = TMENU
+        1 {
+            NO {
+                stdWrap {
+                    field = nav_title // title
+                    htmlSpecialChars = 1
+                }
+
+                allWrap = <li class="first">|</li>|*|<li>|</li>
+            }
+        }
+    }
+
+    20 = TEXT
+    20 {
+        field = nav_title // title
+        wrap = <li class="last"><span>|</span></li>
+        htmlSpecialChars = 1
+    }
+}
+
+[traverse(page, 'is_siteroot') == 1]
+    lib.breadcrumb = COA
+    lib.breadcrumb {
+        10 = HMENU
+        10 {
+            special = rootline
+            special {
+                range = 0|0
+            }
+        }
+
+        20 >
+    }
+[END]

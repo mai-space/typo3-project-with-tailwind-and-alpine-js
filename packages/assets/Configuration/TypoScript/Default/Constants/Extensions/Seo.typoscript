@@ -1,0 +1,7 @@
+plugin {
+    tx_seo {
+        view {
+            templateRootPath = EXT:assets/Resources/Private/Templates/Default/Seo/XmlSitemap
+        }
+    }
+}

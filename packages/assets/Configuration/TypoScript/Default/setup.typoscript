@@ -1,0 +1,21 @@
+# ------------------------------------------------------------------------------------------ BEGIN: Include static setup
+
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:form/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:seo/Configuration/TypoScript/XmlSitemap/setup.typoscript'
+# -------------------------------------------------------------------------------------------- END: Include static setup
+# ------------------------------------------------------------------------------------------------ BEGIN:  Include setup
+
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/Config.typoscript'
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/Plugin.typoscript'
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/Page.typoscript'
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/Lib.typoscript'
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/TtContent.typoscript'
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/ContentElements.typoscript'
+
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/Extensions/*'
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/Contents/*'
+
+@import 'EXT:assets/Configuration/TypoScript/Default/Setup/Debug.typoscript'
+
+# --------------------------------------------------------------------------------------------------- END: Include setup

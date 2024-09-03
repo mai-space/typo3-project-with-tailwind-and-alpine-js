@@ -1,0 +1,34 @@
+plugin {
+    tx_form {
+        view {
+            layoutRootPaths {
+                10 = {$plugin.tx_form.view.layoutRootPath}
+            }
+
+            partialRootPaths {
+                10 = {$plugin.tx_form.view.partialRootPath}
+            }
+
+            templateRootPaths {
+                10 = {$plugin.tx_form.view.templateRootPath}
+            }
+        }
+
+        settings {
+            yamlConfigurations {
+                50 = EXT:form_element_linked_checkbox/Configuration/Yaml/FormSetup.yaml
+                100 = EXT:assets/Configuration/Yaml/CustomFormSetup.yaml
+            }
+        }
+    }
+}
+
+module {
+    tx_form {
+        settings {
+            yamlConfigurations {
+                100 = EXT:assets/Configuration/Yaml/CustomFormSetup.yaml
+            }
+        }
+    }
+}

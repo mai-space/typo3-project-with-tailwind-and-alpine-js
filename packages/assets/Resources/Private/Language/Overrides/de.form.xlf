@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-07-19T19:44:55Z"
+		  product-name="Project">
+		<header/>
+		<body>
+			<trans-unit id="element.dataprotection.properties.label">
+				<target>Einwilligung: Der Erhebung, Verarbeitung und Speicherung der hier erhobenen Daten zum Zwecke der
+					Beantwortung meiner Anfrage über dieses Kontaktformular stimme ich zu. Die %s von Make it in Germany
+					habe ich zur Kenntnis genommen. Mir ist bekannt, dass ich diese Einwilligung jederzeit widerrufen
+					kann. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung wird davon nicht berührt.
+				</target>
+			</trans-unit>
+			<trans-unit id="element.dataprotection.properties.linkText">
+				<target>Datenschutzinformation</target>
+			</trans-unit>
+			<trans-unit id="element.email.properties.label">
+				<target>E-Mail Adresse</target>
+			</trans-unit>
+			<trans-unit id="element.email.properties.placeholder">
+				<target>maxmustermann@domain.de</target>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.label">
+				<target>Geschlecht</target>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.prependOptionLabel">
+				<target>Geschlecht</target>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.options.d">
+				<target>divers</target>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.options.m">
+				<target>männlich</target>
+			</trans-unit>
+			<trans-unit id="element.gender.properties.options.w">
+				<target>weiblich</target>
+			</trans-unit>
+			<trans-unit id="element.message.properties.label">
+				<target>Nachricht</target>
+			</trans-unit>
+			<trans-unit id="element.message.properties.placeholder">
+				<target>Ihre Nachricht</target>
+			</trans-unit>
+			<trans-unit id="element.name.properties.label">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="element.name.properties.placeholder">
+				<target>Max Mustermann</target>
+			</trans-unit>
+			<trans-unit id="element.subject.properties.label">
+				<target>Betreff</target>
+			</trans-unit>
+			<trans-unit id="element.subject.properties.placeholder">
+				<target>Ihr Thema</target>
+			</trans-unit>
+			<trans-unit id="element.telephone.properties.label">
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="element.telephone.properties.placeholder">
+				<target>+49 123 456789</target>
+			</trans-unit>
+
+			<trans-unit id="element.Form.renderingOptions.submitButtonLabel">
+				<target>Senden</target>
+			</trans-unit>
+
+			<trans-unit id="validation.error.1221560910">
+				<target>Dieses Feld ist ein Pflichtfeld.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221560718">
+				<target>Dieses Feld ist ein Pflichtfeld.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1347992400">
+				<target>Dieses Feld ist ein Pflichtfeld.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1347992453">
+				<target>Dieses Feld ist ein Pflichtfeld.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1238087674">
+				<target>Bitte geben Sie ein gültiges Datum ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221551320">
+				<target>Bitte geben Sie nur Buchstaben oder Ziffern ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221565786">
+				<target>Bitte geben Sie nur unformatierten Text ohne Markierungen (z. B. ohne XML-Tags) ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1238110957">
+				<target>Bitte geben Sie nur unformatierten Text ohne Markierungen (z. B. ohne XML-Tags) ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1269883975">
+				<target>Bitte geben Sie nur unformatierten Text ohne Markierungen (z. B. ohne XML-Tags) ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1428504122">
+				<target>Bitte geben Sie einen Text ein, der mindestens %s Zeichen lang und nicht länger als %s ist.
+				</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1238108068">
+				<target>Bitte geben Sie einen Text ein, der länger als %s Zeichen ist.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1238108069">
+				<target>Bitte geben Sie einen Text ein, der nicht länger als %s Zeichen ist.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221559976">
+				<target>Bitte geben Sie eine gültige E-Mail-Adresse ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221560494">
+				<target>Bitte geben Sie eine gültige Nummer ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221560288">
+				<target>Bitte geben Sie eine gültige Gleitkommazahl ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221563685">
+				<target>Bitte geben Sie eine gültige Nummer ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221561046">
+				<target>Bitte geben Sie eine gültige Zahl zwischen %s und %s ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1221565130">
+				<target>Bitte geben Sie einen gültigen Wert ein. Bitte lesen Sie die Beschreibung dieses Feldes.
+				</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1475002976">
+				<target>Bitte geben Sie einen zählbaren Wert an.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1475002994">
+				<target>Bitte wählen Sie zwischen %s und %s Elementen aus.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1471708997">
+				<target>Bitte geben Sie eine Instanz von \TYPO3\CMS\Extbase\Domain\Model\FileReference oder
+					\TYPO3\CMS\Core\Resource\File ein.
+				</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1471708998">
+				<target>Bitte geben Sie eine gültigen Medientyp ein, "%s" ist für diese Datei nicht zulässig. Bitte
+					lesen Sie die Beschreibung dieses Feldes.
+				</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1613126216">
+				<target>Die angegebene Dateierweiterung "%s" stimmt nicht mit den erwarteten Medientypen überein. Bitte
+					lesen Sie die Beschreibung dieses Feldes.
+				</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1476396435">
+				<target>Dieses Feld darf NICHT ausgefüllt werden.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1505303626">
+				<target>Bitte geben Sie eine Instanz von \TYPO3\CMS\Extbase\Domain\Model\FileReference oder
+					\TYPO3\CMS\Core\Resource\File ein.
+				</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1505305752">
+				<target>Bitte wählen Sie eine Datei aus, die größer als %s ist.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1505305753">
+				<target>Bitte wählen Sie eine Datei aus, die nicht größer als %s ist.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1521293685">
+				<target>Bitte geben Sie eine Instanz von \DateTime ein.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1521293686">
+				<target>Bitte wählen Sie ein Datum vor %s aus.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1521293687">
+				<target>Bitte wählen Sie ein Datum nach %s aus.</target>
+			</trans-unit>
+			<trans-unit id="validation.error.1556283177">
+				<target>Das Passwort stimmt nicht mit der Bestätigung überein.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

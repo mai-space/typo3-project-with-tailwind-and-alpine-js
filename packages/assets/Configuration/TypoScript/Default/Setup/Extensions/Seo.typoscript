@@ -1,0 +1,21 @@
+plugin {
+    tx_seo {
+        view {
+            templateRootPaths {
+                20 = EXT:assets/Resources/Private/Templates/Default/Seo/XmlSitemap
+            }
+        }
+
+        config {
+            xslFile = EXT:assets/Resources/Public/Stylesheets/Default/seo.xsl
+            xmlSitemap {
+                sitemaps {
+                    #news {
+                    # Siehe XmlSitemapDataProviders:
+                    # https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ApiOverview/Seo/XmlSitemap.html#xmlsitemapdataproviders
+                    #}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+plugin {
+    tx_cookieconsent {
+        settings {
+            type = opt-in
+
+            overlay {
+                box {
+                    background = #2E4964
+                }
+
+                button {
+                    background = #54D0ED
+                    text = #2E4964
+                }
+            }
+
+            palette {
+                popup {
+                    background = #2E4964
+                }
+
+                button {
+                    background = #54D0ED
+                    text = #2E4964
+                }
+            }
+        }
+    }
+}

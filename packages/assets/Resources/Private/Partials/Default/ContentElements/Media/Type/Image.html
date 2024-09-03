@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    <f:if condition="{file.link}">
+        <f:then>
+            <f:link.typolink parameter="{file.link}" title="{file.title -> f:format.raw()}">
+                <span class="sr-only">
+                    <f:translate key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:lightbox.open"/>
+                </span>
+                <f:render partial="Media/Rendering/Image"
+                          arguments="{file: file, dimensions: dimensions, data: data, settings: settings}"/>
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:if condition="{data.image_zoom}">
+                <f:then>
+                    <a href="{file.publicUrl}" class="photoswipe" data-pswp-width="{file.originalFile.properties.width}"
+                       data-pswp-height="{file.originalFile.properties.height}" data-index="{index}">
+                        <span class="sr-only">
+                            <f:translate
+                                key="LLL:EXT:project/Resources/Private/Language/Default/locallang.xlf:lightbox.open"/>
+                        </span>
+                        <f:render partial="Media/Rendering/Image"
+                                  arguments="{file: file, dimensions: dimensions, data: data, settings: settings}"/>
+                    </a>
+                </f:then>
+                <f:else>
+                    <f:render partial="Media/Rendering/Image"
+                              arguments="{file: file, dimensions: dimensions, data: data, settings: settings}"/>
+                </f:else>
+            </f:if>
+        </f:else>
+    </f:if>
+
+    <f:if condition="{file.description}">
+        <figcaption
+            class="media__caption{f:if(condition: file.properties.tx_project_position, then: ' text-{file.properties.tx_project_position}')}">
+            {file.description -> f:format.raw()}
+        </figcaption>
+    </f:if>
+</figure>
+</html>

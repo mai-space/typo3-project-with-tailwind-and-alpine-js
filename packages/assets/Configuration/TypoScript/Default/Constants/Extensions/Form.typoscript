@@ -1,0 +1,9 @@
+plugin {
+    tx_form {
+        view {
+            layoutRootPath = EXT:assets/Resources/Private/Layouts/Default/Form/
+            partialRootPath = EXT:assets/Resources/Private/Partials/Default/Form/
+            templateRootPath = EXT:assets/Resources/Private/Templates/Default/Form/
+        }
+    }
+}

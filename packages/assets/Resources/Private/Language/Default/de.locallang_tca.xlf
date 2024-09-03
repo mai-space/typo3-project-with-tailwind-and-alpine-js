@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" product-name="project">
+		<header/>
+		<body>
+			<trans-unit id="doktype.landingpage">
+				<source/>
+				<target>Landingpage</target>
+			</trans-unit>
+
+
+			<trans-unit id="pages.crdate">
+				<target>Erstellungsdatum</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_project_preview">
+				<target>Vorschau</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_project_social_media_channels">
+				<target>Social Media</target>
+			</trans-unit>
+
+			<trans-unit id="sys_file_reference.tx_project_displayoptions">
+				<target>Anzeige</target>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.none">
+				<target>nicht anzeigen</target>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.page">
+				<target>in Seite anzeigen</target>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.always">
+				<target>in Vorschau und Seite anzeigen</target>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.preview">
+				<target>in Vorschau anzeigen</target>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_preview">
+				<target>Vorschaubild</target>
+			</trans-unit>
+
+			<trans-unit id="sys_file_reference.ratio.16_9">
+				<target>16x9</target>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.ratio.1_1">
+				<target>1x1</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery">
+				<target>Galerie</target>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery.description">
+				<target>Galerie von Bildern</target>
+			</trans-unit>
+			<trans-unit id="tt_content.text">
+				<target>Text</target>
+			</trans-unit>
+			<trans-unit id="tt_content.text.description">
+				<target>Element für Text, der über acht Spalten fließt</target>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_left">
+				<target>Text &amp; Bild links</target>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_left.description">
+				<target>Bild neben Text, links</target>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_right">
+				<target>Text &amp; Bild rechts</target>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_right.description">
+				<target>Bild neben Text, rechts</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.project_slider">
+				<target>Slider</target>
+			</trans-unit>
+			<trans-unit id="tt_content.project_slider.description">
+				<target>Element für Slider</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.header_layout.1">
+				<target>Überschrift 1</target>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.2">
+				<target>Überschrift 2</target>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.3">
+				<target>Überschrift 3</target>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.4">
+				<target>Überschrift 4</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.tx_project_header_appearance">
+				<target>Aussehen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_header_position.please_choose">
+				<target>Bitte wählen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_page_properties">
+				<target>Seiteneigenschaften</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_page_properties.description">
+				<target>Diese Daten werden in den Seiteneigenschaften gepflegt.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_slider_items">
+				<target>Slider-Elemente</target>
+			</trans-unit>
+
+			<trans-unit id="tx_project_domain_model_slider_item">
+				<target>Slider (Element)</target>
+			</trans-unit>
+			<trans-unit id="tx_project_domain_model_slider_item.header">
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_project_domain_model_slider_item.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

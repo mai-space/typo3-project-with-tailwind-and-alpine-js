@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Header"/>
+<f:section name="Main">
+    <div class="text-media text-media--center text-media--below text-media--wrap">
+        <f:if condition="{data.header} || {data.subheader} || {data.date} || {data.bodytext}">
+            <div class="text text-media__text">
+                <f:render partial="Header/All"
+                          arguments="{data: data, settings: settings, additionalClass: 'text-media__head'}"/>
+
+                <f:if condition="{data.bodytext}">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </f:if>
+            </div>
+        </f:if>
+    </div>
+
+    <f:if condition="{menu}">
+        <div class="list list--default" data-columns="3">
+            <f:for each="{menu}" as="page">
+                <div class="list__item">
+                    <f:render partial="Menu/Default/Default" arguments="{
+                        files: page.files,
+                        title: page.data.title,
+                        subtitle: page.data.subtitle,
+                        link: page.link,
+                        settings: settings
+                    }"/>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</f:section>
+</html>

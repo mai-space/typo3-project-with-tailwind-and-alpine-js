@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<formvh:renderRenderable renderable="{element}">
+    <f:render partial="Field/Field"
+              arguments="{element: element, doNotShowLabel: 1, additionalClass: 'form__item--checkbox'}"
+              contentAs="elementContent">
+        <div class="form-check text--hyphens">
+            <f:form.checkbox
+                property="{element.identifier}"
+                id="{element.uniqueIdentifier}"
+                class="form-check-input{f:if(condition: element.properties.elementClassAttribute, then: ' {element.properties.elementClassAttribute}')}{f:if(condition: element.required, then: ' has-validation')}"
+                value="{element.properties.value}"
+                errorClass="{element.properties.elementErrorClassAttribute}"
+                additionalAttributes="{formvh:translateElementProperty(element: element, property: 'fluidAdditionalAttributes')}"/>
+
+            <f:if condition="{formvh:translateElementProperty(element: element, property: 'label')}">
+                <label for="{element.uniqueIdentifier}" class="form-check-label p">
+                    {formvh:translateElementProperty(element: element, property: 'label') -> f:format.raw()}
+
+                    <f:if condition="!{element.properties._linksProcessed}">
+                        <f:link.typolink parameter="{element.properties.pageUid}" target="_blank">
+                            {formvh:translateElementProperty(element: element, property: 'linkText') -> f:format.raw()}
+                        </f:link.typolink>
+                    </f:if>
+
+                    <f:if condition="{element.required}">
+                        <f:then>
+                            <f:render partial="Field/Required"/>
+                        </f:then>
+                        <f:else>
+                            <f:render partial="Field/Optional"/>
+                        </f:else>
+                    </f:if>
+                </label>
+            </f:if>
+        </div>
+    </f:render>
+</formvh:renderRenderable>
+</html>

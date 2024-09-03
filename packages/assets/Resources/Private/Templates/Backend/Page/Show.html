@@ -1,0 +1,173 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers">
+<f:be.pageRenderer includeRequireJsModules="{
+   0:'{f:uri.resource(path: \'EXT:project/Resources/Public/JavaScripts/Backend/modules/lazyload.js\')}'
+}"/>
+
+<f:if condition="{page}">
+    <div class="typo3-dblist-sysnotes">
+        <div class="t3-page-column-header">
+            <div class="t3-page-column-header-icons btn-group btn-group-sm">
+                <be:link.editRecord table="pages" uid="{page.uid}" returnUrl="{returnUrl}"
+                                    title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:edit')}">
+                    <core:icon identifier="actions-document-open"/>
+                </be:link.editRecord>
+            </div>
+            <div class="t3-page-column-header-label">
+                <f:translate
+                    key="LLL:EXT:project/Resources/Private/Language/Default/locallang_tca.xlf:pages.tx_project_project_information"/>
+            </div>
+        </div>
+
+        <div class="panel panel-default panel-sysnote panel-sysnote-category-3">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <strong>
+                                    <f:translate
+                                        key="LLL:EXT:seo/Resources/Private/Language/locallang_tca.xlf:pages.seo_title"/>
+                                    :</strong>
+                            </div>
+                            <div class="col-sm-9">
+                                <be:link.editRecord table="pages" uid="{page.uid}" fields="seo_title" returnUrl="{returnUrl}" title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:edit')}">
+                                    <f:if condition="{page.seo_title}">
+                                        <f:then>{page.seo_title -> f:format.raw()}</f:then>
+                                        <f:else>-</f:else>
+                                    </f:if>
+                                </be:link.editRecord>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <strong>
+                                    <f:translate
+                                        key="LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.title_formlabel"/>
+                                    :</strong>
+                            </div>
+                            <div class="col-sm-9">
+                                <be:link.editRecord table="pages" uid="{page.uid}" fields="title" returnUrl="{returnUrl}" title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:edit')}">
+                                    <f:if condition="{page.title}">
+                                        <f:then>{page.title -> f:format.raw()}</f:then>
+                                        <f:else>-</f:else>
+                                    </f:if>
+                                </be:link.editRecord>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <strong>
+                                    <f:translate
+                                        key="LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:pages.slug"/>
+                                    :</strong>
+                            </div>
+                            <div class="col-sm-9">
+                                <be:link.editRecord table="pages" uid="{page.uid}" fields="title,slug" returnUrl="{returnUrl}" title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:edit')}">
+                                    <f:if condition="{page.slug}">
+                                        <f:then>{page.slug -> f:format.raw()}</f:then>
+                                        <f:else>-</f:else>
+                                    </f:if>
+                                </be:link.editRecord>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <strong>
+                            <f:translate
+                                key="LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.keywords_formlabel"/>
+                            :</strong><br>
+                        <be:link.editRecord table="pages" uid="{page.uid}" fields="keywords" returnUrl="{returnUrl}" title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:edit')}">
+                            <f:if condition="{page.keywords}">
+                                <f:then>{page.keywords -> f:format.raw()}</f:then>
+                                <f:else>-</f:else>
+                            </f:if>
+                        </be:link.editRecord>
+
+                        <br>
+
+                        <strong>
+                            <f:translate
+                                key="LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.description_formlabel"/>
+                            :</strong><br>
+                        <be:link.editRecord table="pages" uid="{page.uid}" fields="description" returnUrl="{returnUrl}" title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:edit')}">
+                            <f:if condition="{page.description}">
+                                <f:then>{page.description -> f:format.raw()}</f:then>
+                                <f:else>-</f:else>
+                            </f:if>
+                        </be:link.editRecord>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <strong>
+                            <f:translate
+                                key="LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.media"/>
+                            :</strong><br>
+                        <div class="row clearfix">
+                            <div class="col-sm-4">
+                                <f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:pages"/>
+                                :<br>
+                                <f:if condition="{files}">
+                                    <f:then>
+                                        <f:for each="{files}" as="file" iteration="iterator">
+                                            <f:if
+                                                condition="{file.properties.tx_project_displayoptions} == 'page' || {file.properties.tx_project_displayoptions} == 'always'">
+                                                <f:render partial="Media/Type"
+                                                          arguments="{file: file, index: iterator.index, data: data, settings: settings}"/>
+                                            </f:if>
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        -
+                                    </f:else>
+                                </f:if>
+                            </div>
+                            <div class="col-sm-4">
+                                <f:translate
+                                    key="LLL:EXT:project/Resources/Private/Language/Default/locallang_tca.xlf:pages.tx_project_preview"/>
+                                :<br>
+                                <f:if condition="{files}">
+                                    <f:then>
+                                        <f:for each="{files}" as="file" iteration="iterator">
+                                            <f:if
+                                                condition="{file.properties.tx_project_displayoptions} == 'preview' || {file.properties.tx_project_displayoptions} == 'always'">
+                                                <f:render partial="Media/Type"
+                                                          arguments="{file: file, index: iterator.index, data: page, settings: settings}"/>
+                                            </f:if>
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        -
+                                    </f:else>
+                                </f:if>
+                            </div>
+                            <div class="col-sm-4">
+                                <f:translate
+                                    key="LLL:EXT:project/Resources/Private/Language/Default/locallang_tca.xlf:pages.tx_project_social_media_channels"/>
+                                :<br>
+                                <f:if condition="{files}">
+                                    <f:then>
+                                        <f:for each="{files}" as="file" iteration="iterator">
+                                            <f:if condition="{iterator.isFirst}">
+                                                <f:render partial="Media/Type"
+                                                          arguments="{file: file, index: iterator.index, data: page, settings: settings}"/>
+                                            </f:if>
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        -
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:if>
+</html>

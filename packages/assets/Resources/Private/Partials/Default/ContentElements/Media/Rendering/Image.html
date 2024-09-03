@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:base="http://typo3.org/ns/Iwm/Base/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:switch expression="{file.properties.extension}">
+    <f:case value="svg">
+        <picture class="aspect-ratio">
+
+        </picture>
+        <meta itemprop="url" content="{f:uri.image(src: file.publicUrl, absolute: 1)}">
+        <meta itemprop="width" content="{dimensions.width}">
+        <meta itemprop="height" content="{dimensions.height}">
+    </f:case>
+    <f:case value="gif">
+        <picture class="aspect-ratio">
+            <f:image image="{file}" maxWidth="16" cropVariant="default"
+                     data="{src: '{f:uri.image(image: file, crop: \'NULL\')}'}" title="{file.title -> f:format.raw()}"
+                     alt="{file.alternative -> f:format.raw()}" loading="{settings.media.lazyLoading}"
+                     class="img-fluid lazyload"/>
+            <noscript>
+                <f:image image="{file}" crop="NULL" title="{file.title -> f:format.raw()}"
+                         alt="{file.alternative -> f:format.raw()}" class="img-fluid"/>
+            </noscript>
+            <span class="placeholder icon--center">
+
+            </span>
+        </picture>
+        <meta itemprop="url" content="{f:uri.image(src: file.publicUrl, absolute: 1)}">
+        <meta itemprop="width" content="{dimensions.width}">
+        <meta itemprop="height" content="{dimensions.height}">
+    </f:case>
+    <f:defaultCase>
+        <picture class="aspect-ratio--{base:cropVariant(ratio: file.properties.crop)}">
+            <f:image image="{file}" maxWidth="16" cropVariant="default"
+                     data="{src: '{f:uri.image(image: file, maxWidth: dimensions.width, cropVariant: \'default\')}'}"
+                     title="{file.title -> f:format.raw()}" alt="{file.alternative -> f:format.raw()}"
+                     loading="{settings.media.lazyLoading}" class="img-fluid lazyload"/>
+            <noscript>
+                <f:image image="{file}" maxWidth="{dimensions.width}" cropVariant="default"
+                         title="{file.title -> f:format.raw()}" alt="{file.alternative -> f:format.raw()}"
+                         class="img-fluid"/>
+            </noscript>
+            <span class="placeholder icon--center">
+
+            </span>
+        </picture>
+        <meta itemprop="url" content="{f:uri.image(src: file.publicUrl, absolute: 1)}">
+        <meta itemprop="width" content="{dimensions.width}">
+        <meta itemprop="height" content="{dimensions.height}">
+    </f:defaultCase>
+</f:switch>
+</html>

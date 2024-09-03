@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" product-name="project">
+		<header/>
+		<body>
+			<trans-unit id="doktype.landingpage">
+				<source>Landingpage</source>
+			</trans-unit>
+
+			<trans-unit id="pages.crdate">
+				<source>Creation date</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_project_preview">
+				<source>Preview</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_project_social_media_channels">
+				<source>Social media</source>
+			</trans-unit>
+
+			<trans-unit id="sys_file_reference.tx_project_displayoptions">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.none">
+				<source>Do not show</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.page">
+				<source>Show in Page only</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.always">
+				<source>Show in Preview and Page</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_displayoptions.preview">
+				<source>Show in Preview only</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.tx_project_preview">
+				<source>Preview image</source>
+			</trans-unit>
+
+			<trans-unit id="sys_file_reference.ratio.16_9">
+				<source>16x9</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.ratio.1_1">
+				<source>1x1</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.gallery">
+				<source>Gallery</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gallery.description">
+				<source>Gallery of images</source>
+			</trans-unit>
+			<trans-unit id="tt_content.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tt_content.text.description">
+				<source>Element for text that flows about eight columns</source>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_left">
+				<source>Text &amp; Image left</source>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_left.description">
+				<source>Image beside text, left</source>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_right">
+				<source>Text &amp; Image right</source>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic_right.description">
+				<source>Image beside text, right</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.project_slider">
+				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="tt_content.project_slider.description">
+				<source>Element for slider</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.header_layout.1">
+				<source>Headline 1</source>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.2">
+				<source>Headline 2</source>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.3">
+				<source>Headline 3</source>
+			</trans-unit>
+			<trans-unit id="tt_content.header_layout.4">
+				<source>Headline 4</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.tx_project_page_properties">
+				<source>Page properties</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_page_properties.description">
+				<source>This data is maintained in the page properties.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_header_appearance">
+				<source>Appearance</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_header_position.please_choose">
+				<source>Please Choose</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_page_properties">
+				<source>Page properties</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_page_properties.description">
+				<source>This data is maintained in the page properties.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_project_slider_items">
+				<source>Slider items</source>
+			</trans-unit>
+
+			<trans-unit id="tx_project_domain_model_slider_item">
+				<source>Slider (item)</source>
+			</trans-unit>
+			<trans-unit id="tx_project_domain_model_slider_item.header">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_project_domain_model_slider_item.description">
+				<source>Description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

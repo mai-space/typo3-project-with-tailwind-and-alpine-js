@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" product-name="project">
+		<header/>
+		<body>
+			<trans-unit id="brand">
+				<source>IW Medien</source>
+			</trans-unit>
+			<trans-unit id="slogan">
+				<source>IW Medien</source>
+			</trans-unit>
+			<trans-unit id="copyright">
+				<source>by IW Medien. All rights reserved.</source>
+			</trans-unit>
+			<trans-unit id="meta.description">
+				<source>Welcome to the website of IW Medien GmbH.</source>
+			</trans-unit>
+			<trans-unit id="meta.keywords">
+				<source>IW, IW Medien, Agency</source>
+			</trans-unit>
+
+			<trans-unit id="content-element">
+				<source>Content element with id %s</source>
+			</trans-unit>
+			<trans-unit id="enable-javascript">
+				<source>You have to activate JavaScript in your browser to use this module.</source>
+			</trans-unit>
+			<trans-unit id="iframe.activate">
+				<source>Activate external content</source>
+			</trans-unit>
+			<trans-unit id="lightbox.open">
+				<source>Show image in lightbox</source>
+			</trans-unit>
+			<trans-unit id="more">
+				<source>Read more</source>
+			</trans-unit>
+			<trans-unit id="optional">
+				<source>Optional</source>
+			</trans-unit>
+			<trans-unit id="placeholder">
+				<source>Placeholder</source>
+			</trans-unit>
+			<trans-unit id="privacy.single">
+				<source>In order to protect your privacy this element is disabled. If you enable the item for your own,
+					the third party %s will keep informed about your visit to us until you disable the item for your own
+					or delete your cookies.
+				</source>
+			</trans-unit>
+			<trans-unit id="privacy.multiple">
+				<source>In order to protect your privacy this element is disabled. If you enable the item for your own,
+					the third parties %s will keep informed about your visit to us until you disable the item for your
+					own or delete your cookies.
+				</source>
+			</trans-unit>
+			<trans-unit id="video.play">
+				<source>Play video</source>
+			</trans-unit>
+
+			<trans-unit id="facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="linkedin">
+				<source>LinkedIn</source>
+			</trans-unit>
+			<trans-unit id="twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="xing">
+				<source>Xing</source>
+			</trans-unit>
+
+			<trans-unit id="home">
+				<source>Go to home</source>
+			</trans-unit>
+
+			<trans-unit id="nav.menu.close">
+				<source>Close menu</source>
+			</trans-unit>
+			<trans-unit id="nav.menu.show">
+				<source>Show menu</source>
+			</trans-unit>
+			<trans-unit id="nav.menu.toggle">
+				<source>Show/Close menu</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,17 @@
+lib {
+    contentElement {
+        settings {
+            baseUrl < plugin.tx_project.settings.baseUrl
+            uids < plugin.tx_project.settings.uids
+            pids < plugin.tx_project.settings.pids
+            images < plugin.tx_project.settings.images
+            color < plugin.tx_project.settings.color
+        }
+    }
+}
+
+tt_content {
+    form_formframework {
+        templateName = Form
+    }
+}

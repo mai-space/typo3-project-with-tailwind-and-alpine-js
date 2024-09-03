@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<picture class="aspect-ratio">
+    <f:image image="{file}" width="16" cropVariant="NaN"
+             data="{src: '{f:uri.image(image: file, width: 500, cropVariant: \'NaN\')}'}"
+             title="{data.title -> f:format.raw()}" alt="{data.title -> f:format.raw()}"
+             loading="{settings.media.lazyLoading}" class="img-fluid w-100 lazyload"/>
+    <noscript>
+        <f:image image="{file}" width="500" cropVariant="NaN" title="{data.title -> f:format.raw()}"
+                 alt="{data.title -> f:format.raw()}" class="img-fluid w-100"/>
+    </noscript>
+</picture>
+</html>

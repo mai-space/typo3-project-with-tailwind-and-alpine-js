@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+    <div class="list list--default" data-columns="3">
+        <div class="list__item">
+            <f:for each="{children_201}" as="element">
+                {element.renderedContent -> f:format.raw()}
+            </f:for>
+        </div>
+        <div class="list__item">
+            <f:for each="{children_202}" as="element">
+                {element.renderedContent -> f:format.raw()}
+            </f:for>
+        </div>
+        <div class="list__item">
+            <f:for each="{children_203}" as="element">
+                {element.renderedContent -> f:format.raw()}
+            </f:for>
+        </div>
+    </div>
+</f:section>
+</html>

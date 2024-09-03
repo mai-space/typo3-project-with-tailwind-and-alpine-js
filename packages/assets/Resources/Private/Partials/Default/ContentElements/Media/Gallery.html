@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:if condition="{gallery.rows}">
+    <div class="media{f:if(condition: additionalClass, then: ' {additionalClass}')}" data-ce-columns="{data.imagecols}"
+         data-ce-images="{gallery.count.files}">
+        <f:for each="{gallery.rows}" as="row">
+            <f:for each="{row.columns}" as="column" iteration="iterator">
+                <f:if condition="{column.media}">
+                    <f:render partial="Media/Type" arguments="{
+                        file: column.media,
+                        dimensions: column.dimensions,
+                        index: iterator.index,
+                        data: data,
+                        settings: settings
+                    }"/>
+                </f:if>
+            </f:for>
+        </f:for>
+    </div>
+</f:if>
+</html>

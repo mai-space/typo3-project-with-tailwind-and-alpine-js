@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="text" id="{form.identifier}">
+    <p>
+        <f:if condition="{isPreparedMessage}">
+            <f:then>
+                {message -> f:format.raw()}
+            </f:then>
+            <f:else>
+                {message}
+            </f:else>
+        </f:if>
+    </p>
+</div>
+</html>

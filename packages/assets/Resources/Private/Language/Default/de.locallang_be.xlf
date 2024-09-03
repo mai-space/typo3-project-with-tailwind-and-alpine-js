@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" product-name="project">
+		<header/>
+		<body>
+			<trans-unit id="backend_layout.title.default">
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.title.start">
+				<target>Start</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.title.overview">
+				<target>Übersicht</target>
+			</trans-unit>
+
+			<trans-unit id="backend_layout.column.main">
+				<target>Inhalt</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

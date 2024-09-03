@@ -1,0 +1,36 @@
+# customsubcategory=settings=Settings
+
+globals {
+    media {
+        lazyLoading = lazy
+    }
+
+    images {
+        default = https://via.placeholder.com/1600x1000
+    }
+
+    color {
+        # cat=plugin.tx_project/color; type=color; label=Primäre Farbe
+        primaryColor = #2E4964
+
+        # cat=plugin.tx_project/color; type=color; label=Sekundäre Farbe
+        secondaryColor = #54D0ED
+    }
+
+    settings {
+        # cat=plugin.tx_project/settings; type=string; label=Base-URL
+        baseUrl = https://www.iwmedien.de
+
+        # cat=plugin.tx_project/settings; type=string; label=Twitter-Name
+        twitterName = @IW_Medien
+    }
+}
+
+
+[applicationContext == "Development/Ddev"]
+    globals {
+        settings {
+            baseUrl = https://iw-medien-master.ddev.site
+        }
+    }
+[END]

@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<figure class="audio" itemprop="associatedMedia audio" itemscope="" itemtype="http://schema.org/AudioObject">
+    <div class="audio-embed">
+        <f:render partial="Media/Rendering/Audio" arguments="{file: file, dimensions: dimensions, settings: settings}"/>
+    </div>
+    <f:if condition="{file.description}">
+        <figcaption
+            class="media__caption{f:if(condition: file.properties.tx_project_position, then: ' text-{file.properties.tx_project_position}')}">
+            {file.description -> f:format.raw()}
+        </figcaption>
+    </f:if>
+</figure>
+</html>

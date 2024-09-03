@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:if condition="{file.properties.tx_project_preview}">
+    <f:variable name="previewImage"
+                value="{f:uri.image(src: file.properties.tx_project_preview, width: '1600c', height: '900c')}"/>
+</f:if>
+
+<div class="media intro__media">
+    <f:switch expression="{file.properties.extension}">
+        <f:case value="youtube">
+            <figure class="iframe iframe--video" data-toggle="false" itemprop="associatedMedia video" itemscope=""
+                    itemtype="http://schema.org/VideoObject">
+                <f:render partial="Media/Rendering/Iframe"
+                          arguments="{previewImage: '{f:if(condition: previewImage, then: previewImage, else: \'{base:youTubePreviewImage(file: file.originalFile)}\')}', aspectRatio: '16by9', file: file, dimensions: dimensions, type: 'video', settings: settings}"/>
+            </figure>
+        </f:case>
+        <f:defaultCase>
+            <figure class="video" itemprop="associatedMedia video" itemscope=""
+                    itemtype="http://schema.org/VideoObject">
+                <f:render partial="Media/Rendering/Video"
+                          arguments="{slug: '{f:uri.image(src: file.publicUrl, absolute: 1)}', mimeType: file.properties.mime_type, previewImage: '{f:if(condition: previewImage, then: previewImage, else: \'\')}', aspectRatio: '16by9', file: file, dimensions: dimensions, settings: settings}"/>
+            </figure>
+        </f:defaultCase>
+    </f:switch>
+</div>
+</html>

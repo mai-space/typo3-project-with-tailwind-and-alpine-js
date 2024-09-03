@@ -1,0 +1,40 @@
+lib {
+    contentRecord = RECORDS
+    contentRecord {
+        source {
+            data = current:1
+            intval = 1
+        }
+
+        dontCheckPid = 1
+        tables = tt_content
+    }
+
+    dynamicContent = COA
+    dynamicContent {
+        10 = LOAD_REGISTER
+        10 {
+            colPos.cObject = TEXT
+            colPos.cObject {
+                field = colPos
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                    ifEmpty = 0
+                }
+            }
+        }
+
+        20 = CONTENT
+        20 {
+            table = tt_content
+            select {
+                orderBy = sorting
+                where = colPos={register:colPos}
+                where.insertData = 1
+            }
+        }
+
+        90 = RESTORE_REGISTER
+    }
+}
